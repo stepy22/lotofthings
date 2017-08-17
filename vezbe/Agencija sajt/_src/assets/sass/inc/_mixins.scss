@@ -1,0 +1,213 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+// Hor menu
+@mixin menu($align, $spacing, $font-color, $font-size, $font-weight, $text-case, $theme, $trans) {
+	text-transform: $text-case;
+	text-align: $align;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	&__item {
+		display: inline-block;
+		margin-right: $spacing;
+		&:last-child {
+			margin-right: 0;
+		}
+		@media (min-width: 768px) {
+			//1 lvl submenu
+			&:not(.submenu-mega) > .submenu {
+				opacity: 0;
+				@include transition(.3s);
+				@include transform(translateY(20px));
+				//deeper lvl submenus
+				& .submenu {
+					opacity: 0;
+					@include transition(.3s);
+					@include transform(translateX(-10px));
+					&__item {
+						//deeper lvl submenus on hover
+						&:hover > .submenu {
+							opacity: 1;
+							@include transform(translateX(0));
+						}
+					}
+				}
+			}
+			&.submenu-mega {
+				&:hover .submenu {
+					visibility: visible;
+				}
+				& > .submenu {
+					opacity: 0;
+					@include transition(.3s);
+					@include transform(translateY(20px));
+				}
+			}
+			//1 lvl submenu on hover
+			&:hover > .submenu {
+				opacity: 1;
+				visibility: visible;
+				@include transform(translateY(0));
+			}
+		}
+	}
+	&__link {
+		position: relative;
+		display: inline-block;
+		color: $font-color;
+		font-family: $font2;
+		@include transition($trans);
+		&:hover {
+			color: $theme;
+			cursor: pointer;
+		}
+		//additional effects
+		&:after, &_active:after {
+			@include after(absolute, block, 0, 1px);
+			top: 50%;
+			margin-top: 18px;
+			background: transparent;
+			@include transition($trans * 3);
+		}
+		&:hover:after, &_active:after {
+			background: $theme;
+			width: 100%;
+		}
+		&_active {
+			color: $theme;
+		}
+	}
+}
+// before/after
+@mixin before($pos, $display, $w, $h, $content: '') {
+	content: $content;
+	position: $pos;
+	display: $display;
+	width: $w;
+	height: $h;
+}
+@mixin after($pos, $display, $w, $h, $content: '') {
+	content: $content;
+	position: $pos;
+	display: $display;
+	width: $w;
+	height: $h;
+}
+// opacity + optional background
+@mixin opacity($opacity, $bck: null) {
+	@if ($bck) {
+		background: $bck;
+	}
+	opacity: $opacity;
+}
+// Transparent black
+@mixin black($opacity) {
+	color: rgba(0, 0, 0, $opacity);
+}
+// Transform
+//@mixin transform($func) {
+//	-webkit-transform: $func;
+//	-ms-transform: $func;
+//	transform: $func;
+//}
+// Transition. Default: $duration all ease 0s
+@mixin transition($dur, $prop: null, $ease: null, $delay: null) {
+	-webkit-transition: $dur $prop $ease $delay;
+	transition: $dur $prop $ease $delay;
+}
+@mixin transition-delay($delay) {
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+// Animation. Default: $duration $name 1 0s ease normal none running
+@mixin animation($dur, $name, $count: null, $delay: null, $ease: null, $direction: alternate, $fill-mode: null, $play-state: null) {
+	@if ($dur==none and $name==none) {
+		-webkit-animation: none;
+		animation: none;
+	}
+	@else {
+		-webkit-animation: $dur $name $count $delay $ease $direction $fill-mode $play-state;
+		animation: $dur $name $count $delay $ease $direction $fill-mode $play-state;
+	}
+}
+@mixin animation-delay($delay) {
+	-webkit-animation-delay: $delay;
+	animation-delay: $delay;
+}
+@mixin animation-fill-mode($fill-mode) {
+	-webkit-animation-fill-mode: $fill-mode;
+	animation-fill-mode: $fill-mode;
+}
+// Gradient
+@mixin gradient($color1, $color2) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color1), to($color2));
+	background-image: -webkit-linear-gradient($color1, $color2);
+	background-image: linear-gradient($color1, $color2);
+}
+// Media mixins
+@mixin media($screen) {
+	@if ($screen==xs) {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+	@if ($screen==sm) {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+	@if ($screen==md) {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+	@if ($screen==lg) {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+// Triangles. Direction: up, right, down, left
+@mixin triangle($direction, $width, $height, $color, $background-color: transparent) {
+	@include size(0);
+	@if $direction==up {
+		@include border-y();
+		border-top: 0;
+		border-bottom: $height solid $color;
+	}
+	@if $direction==right {
+		@include border-x();
+		border-right: 0;
+		border-left: $width solid $color;
+	}
+	@if $direction==down {
+		@include border-y;
+		border-top: $height solid $color;
+		border-bottom: 0;
+	}
+	@if $direction==left {
+		@include border-x;
+		border-right: $width solid $color;
+		border-left: 0;
+	}
+}
+@mixin border-y {
+	border-right: ($width / 2) solid $background-color;
+	border-left: ($width / 2) solid $background-color;
+}
+@mixin border-x {
+	border-top: ($height / 2) solid $background-color;
+	border-bottom: ($height / 2) solid $background-color;
+}
+
+// Color schemes
+@mixin theme-color($theme) {
+// NOT BEAUTIFY !!!
+	.theme-color{ color: $theme;}.menu-desktop .menu__link:hover{ color: $theme;}.menu-desktop .menu__link:hover:after, .menu-desktop .menu__link_active:after{ background: $theme;}.menu-desktop .menu__link_active{ color: $theme;}.menu-desktop .submenu__link:hover{ background: $theme;}.menu-desktop .submenu-mega > .submenu .submenu .submenu__item:first-child:not(.submenu__item_empty):after{ background: $theme;}.menu-desktop .submenu-mega .submenu__link:hover{ color: $theme;}.menu-mobile .menu__link:hover{ background: $theme;}.menu-mobile .menu__link_pressed{ color: $theme;}.menu-mobile .submenu__link:hover{ background: $theme;}.menu-toggle:hover .menu-toggle__inner, .menu-toggle:hover .menu-toggle__inner:after, .menu-toggle:hover .menu-toggle__inner:before{ background-color: $theme;}.main-video__title:after{ background: $theme;}.pro-item__timeline{ background: $theme;}.main-5-slider-text__title_before:before{ background: $theme;}.main-5-slider-text__title_after:after{ background: $theme;}.features-1 .features-item__icon{ background: $theme;}.features-1 .features-item__icon:after{ border: 2px solid $theme;}.features-1 .features-item__link{ color: $theme;}.features-2 .features-item{ background: $theme;}.features-3 .features-item__icon{ color: $theme;}.portfolio-item__wrap:before{ background: $theme;}.portfolio-item__wrap:hover:before{ background: $theme;}.portfolio-filter__item:hover{ color: $theme;}.portfolio-filter__item_active{ color: $theme !important;}.section-arrow:before{ color: $theme;}.s-get-it__bg:before{ background: $theme;}.s-get-it-2{ background: $theme;}.s-get-it-2-triangle:before{ border-color: transparent transparent $theme;}.process :nth-child(2n+1) .process-item{ background: $theme;}.process-subitem__ico:before{ color: $theme;}.s-blog-post:after{ background: $theme;}.team-item-social__icon:hover{ border-color: $theme;}.team-item-social__icon:hover:before{ color: $theme;}.team-item-details{ background: $theme;}.team-2-item-social__icon:hover{ color: $theme;}.skills-graph-linear__bar, .skills-graph-linear__bg:after{ background: $theme;}.skills-graph-circle__bar{ stroke: $theme;}.skills-graph-circle__bg{ stroke: $theme;}.counters__bg:before{ background: $theme;}.counters-item__count.counters-item__count_color_theme, .counters-item__ico.counters-item__ico_color_theme{ color: $theme;}.offer-1-features-item:before{ color: $theme;}.offer-2 :nth-child(2n) .offer-2-item{ background: $theme;}.offer-2-subitem__ico:before{ color: $theme;}.offer-3-feature__ico{ background: $theme;}.offer-3-feature__ico:after{ border: 16px solid $theme;}.offer-3-feature__name{ color: $theme;}.offer-3-feature__name:after, .offer-3-feature__name:before{ background: $theme;}.s-clients:before{ background: $theme;}.clients-item__text:after, .clients-item__text:before{ color: $theme;}.clients-item__name{ color: $theme;}.clients-dots__dot.active{ background: $theme;}.footer__title:after{ background: $theme;}.footer-contacts__link{ color: $theme;}.footer-social__item:hover:before{ color: $theme;}.footer-twitter-feed-vertical__list a{ color: $theme;}.footer-twitter-feed-vertical__item:before{ color: $theme;}.footer-form__submit:hover{ background: $theme;}.footer-menu__link:hover, .footer-menu__link_active{ color: $theme;}.footer-menu__link:after{ background: $theme;}.likeapro:hover{ color: $theme;}.faq-q:before{ color: $theme;}.faq-a:after, .faq-a:before{ background: $theme;}.four04-title{ color: $theme;}.four04-text{ color: $theme;}.contact-info__link:hover{ color: $theme !important;}.contact-form__submit{ background: $theme;}.section-2 .section__title:after{ background: $theme;}.google-maps__marker{ border: 4px solid $theme;}.btn-a_color_theme:hover:after, .btn-a_fill_theme:after{ background: $theme;}.btn-a_color_theme{ color: $theme;}.btn-a_color_theme{ border-color: $theme;}.btn-a_fill_theme{ border-color: $theme;}.btn-a_fill_theme:hover{ color: $theme;}.modal__info:hover:before{ color: $theme;}.project-modal__url{ color: $theme;}.preloader:before{ border-color: $theme $theme transparent;}.blog-nav__link:hover, .blog-nav__link_active{ border: 1px solid $theme;}.blog-nav__link:hover, .blog-nav__link_active{ background: $theme;}.blog-sidebar-block__title:after{ background: $theme;}.blog-sidebar-search__submit:hover{ color: $theme;}.blog-sidebar-list__link:before{ color: $theme;}.blog-sidebar-list__link:hover{ color: $theme;}.blog-sidebar-tags__tag:hover{ color: $theme;}.blog-sidebar-tags__tag:hover{ border-color: $theme;}.post-format-image .post-title:hover, .post-format-slider .post-title:hover{ color: $theme;}.post-format-simple .post-title:hover, .post-format-video .post-title:hover{ color: $theme;}.post-date{ background: $theme;}.post-content-quote:after, .post-content-quote:before{ background: $theme;}.post-meta__link:hover{ color: $theme;}.blog-author:after{ background: $theme;}.blog-related-post-thumb__inner:after{ background: $theme;}.blog-related-post-thumb:hover .blog-related-post-thumb__inner:after{ background: $theme;}.blog-related-post-meta__title:hover{ color: $theme;}.blog-related-post-meta-comments__link:hover{ color: $theme;}.comment-meta__author:hover{ color: $theme;}.comment-reply-link:hover{ color: $theme;}
+}

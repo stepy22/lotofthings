@@ -1,0 +1,24 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+@include keyframes(shake) {
+  0%, 100% {@include transform(translate3d(0, 0, 0));}
+	10%, 30%, 50%, 70%, 90% {@include transform(translate3d(-10px, 0, 0));}
+	20%, 40%, 60%, 80% {@include transform(translate3d(10px, 0, 0));}
+}
+
+@mixin shake($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(shake);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

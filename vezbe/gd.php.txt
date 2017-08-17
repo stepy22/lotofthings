@@ -1,0 +1,40 @@
+<?php
+ 
+//u string stavljamo listu svih karaktera koji ce ucestvovati u kreiranju slicice
+$slova = "abcdefghijklmnopqrstuvwxyz";
+ 
+//prolazak kroz petlju i izgradnja stringa sastavljenog od slucajnih karaktera
+$tekst = "";
+for($i=0;$i<5;$i++)
+$tekst.=$slova[Rand(0,strlen($slova)-1)];
+ 
+//kreiranje slike
+$slika = imagecreatetruecolor(100, 30);
+ 
+//pravljenje
+$pozadina = imagecolorallocate($slika, 255, 255, 255);
+$ispis = imagecolorallocate($slika, 0, 0, 0);
+$siva = imagecolorallocate($slika, 100, 100, 100);
+//bojenje pozadine u belo
+imagefilledrectangle($slika, 0, 0, 399, 29, $pozadina);
+ 
+//deo za iscrtavanje mrezaste pozadine
+$brojac = 0;
+for($a=0;$a<imagesy($slika);$a++)
+{
+    for($i=0;$i<imagesx($slika);$i++)
+        {
+            if($brojac%2==0)
+            imagesetpixel($slika, $i,$a, $siva);
+            $brojac++;
+        }
+        $brojac++;
+}
+ 
+//ubacivanje teksta u sliku
+imagettftext($slika, 20, 5, 10, 25, $ispis, "arial.ttf", $tekst);  
+ 
+//emitovanje slike u pretrazivac
+imagepng($slika);
+ 
+?>

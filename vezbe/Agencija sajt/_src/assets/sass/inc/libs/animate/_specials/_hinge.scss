@@ -1,0 +1,47 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+@include keyframes(hinge) {
+  0% {
+    animation-timing-function: ease-in-out;
+    @include transform(rotate3d(0));
+    @include transform-origin(top left);
+  }
+  20%, 60% {
+    animation-timing-function: ease-in-out;
+    @include transform(rotate3d(0, 0, 1, 80deg));
+    @include transform-origin(top left);
+  }
+  40% {
+    animation-timing-function: ease-in-out;
+    @include transform(rotate3d(0, 0, 1, 60deg));
+    @include transform-origin(top left);
+  }
+  80% {
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+    @include transform(rotate3d(0, 0, 1, 70deg) translate3d(0, 0, 0));
+    @include transform-origin(top left);
+  }
+  100% {
+	animation-timing-function: ease-in-out;
+    @include transform(rotate3d(0, 0, 1, 75deg) translate3d(0, 0, 0));
+    @include transform-origin(top left);
+  }
+}
+
+@mixin hinge($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(hinge);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+background-image: url(../images/background.jpg);
+background-attachment:fixed;/*da se ne pomjera pri skrolovanju*/
+background-position:center top;/*da se prikaze cijela slika*/
+background-repeat:no-repeat;
+background-size:cover;/*da odgovara coveru*/
+background-color:#872123;	
+	}
+
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size:14px;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	margin:0.5em 0 0.5em;/*da se mjenja kako se mjenja veličina naslova*/
+	}
+	
+h1 {font-size:34px;}
+h1 {font-size:26px;}
+h1 {font-size:24px;}
+h1 {font-size:22px;}
+h1 {font-size:20px;}
+h1 {font-size:18px;}
+
+a:link, a:visited {
+	color:#770608;
+	text-decoration:none;
+	}
+
+a:hover {
+	color:#030303;
+	text-decoration:underline;
+	}
+a:active {
+	color:#999;
+	}
+img {
+	vertical-align:bottom;/*da kod slike nema donjeg paddinga jer on sliku shvata kao slovo i svako slovo ima descending*/
+	}
+#wrapper {
+	width:960px;
+	padding:15px;
+	margin:30px auto;/*da se centrira*/
+	background-color:#FFFFFF;
+	border-radius:5px;/*da bude malo zaobljeno*/
+	
+	}
+#header {
+	background-color:#770608;
+	overflow:hidden;	
+	margin-bottom:15px;
+	color:#FFF;
+	padding:10px;
+	}
+#slogan {
+	float:right;
+	font-style:italic;
+	font-size:20px;
+	text-shadow:2px 0;
+	}
+#logo {
+	float:left;
+	}
+#nav {
+	background-color:#333;
+	height:40px;
+	margin-bottom:15px;
+	}
+#nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+#nav ul li {
+	float:left;/*da se redaju jedno pored dr a relative zbog padajućeg menija*/
+	position:relative;}
+	
+#nav ul li ul {
+	position:absolute;/*da bi dobili jedno ispod dr a ne jedno do drugog, i to u odnosu na relative koji je roditelj*/
+	top:40px;/*kod absolute se dodaje top,left.. u odnosu na roditelj */
+	left:0;
+	width:140px;/*inače bi uzelo od roditelja*/
+	background-color:rgba(0,0, 0,0.7);/*da bude providno*/
+	display:none; /*da se ne bi prikazivalo dok se ne predje preko njega-hover*/
+	}	
+ #nav ul li:hover > ul {
+	display:block; /*da bi dobili padajući od about as da nema njega ne bi se otvorilo kad predjemo misem vec bi se stalno pprikazivalo-odbnosi se na gore none, samo onaj li koji je hoverovan, >-kombinator mogu se postavili unutar selektora da ograniči doseg,da gađa samo ul unutar li, */
+	}
+#nav ul li ul li {
+	float:none; /*???*/
+
+		}
+		
+#nav ul li ul li ul {	
+	top:0;
+	left:140px;		
+	}
+		
+#nav ul li a { /*linkovi su inace inline i da bi bili block i da bi se uklopili u nav */
+	padding:10px;
+	display:block;
+	height:20px;
+}
+#nav ul li a:link,
+#nav ul li a:visited{
+	color:#FFFFFF; /*da se mjenja boja slova*/
+	text-decoration:none;
+	}	
+#nav ul li a:hover {
+	background-color:#770608;/*da se mjenja kako se prelazi preko njega*/
+	}
+#nav ul li a:active {
+	background-color:#999999;/*u onom momentu dok se stišće da se mjenja boja*/
+	color:#000000;
+	}
+#social {
+	float:right;
+	font-size:26px;
+	margin-right:10px;
+	}
+#social a:link,
+#social a:visited {
+	color:#878787;
+}
+#social a:hover {
+	color:#FFF;
+}
+#social a:active {
+	color:#770608; 
+	}
+#main {
+	float:left;
+	width:700px;
+	margin-right:20px;
+}
+#sidebar {
+	float:left;
+	width:240px;	
+	}
+#sidebar h2 {
+	background-color:#BBB;	
+	color:#FFF;
+	padding:4px;
+	}
+#sidebar .block {
+	margin-bottom:15px; /*svi elementi u sidebar stavljeni su u div pa da se odredi razmak*/
+	}
+#footer {
+	clear:both;
+	background-color:#333333;
+	text-align:center;
+	color:#BBBBBB;
+	padding:5px;
+	}
+#footer p {
+	margin:0;
+	}
+/*Stranica work*/	
+.work {
+	border:1px solid #CCC;
+	margin-bottom:10px;
+	padding:10px;
+	overflow:hidden;/*jeer je slika left a kad smo stavili i ovo left ne bi nam trebalo*/
+	float:left;
+	width:318px;/*kad smo izracunali padding border i width*/
+	margin-right:20px;
+	
+}
+.work:nth-of-type(2n){
+	margin-right:0;/*da desni div ne bi imao margin jer mu ne treba,2n je svaki drugi*/
+}
+.work img {
+	float:left;
+	margin-right:10px;
+	margin-bottom:2px;/*ako budie dio teksta ispod slike*/
+	
+}

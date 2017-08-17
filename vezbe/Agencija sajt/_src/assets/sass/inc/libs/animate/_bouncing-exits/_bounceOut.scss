@@ -1,0 +1,35 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+@include keyframes(bounceOut) {
+  0% {
+    @include transform(scale3d(1,1,1));
+  }
+  25% {
+    @include transform(scale3d(.95,.95,.95));
+  }
+  50% {
+    opacity: 1;
+    @include transform(scale3d(1.1,1.1,1.1));
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale3d(.3,.3,.3));
+  }
+}
+
+@mixin bounceOut($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(bounceOut);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

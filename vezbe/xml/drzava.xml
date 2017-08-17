@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTf-8" ?>
+<root>  
+<country countryCode="sr">
+<name>serbia</name>
+<capital>Beograd</capital>
+<description>
+Opis Srbije........
+</description>
+</country>
+<country countryCode="fr">
+<name>francuska</name>
+<capital>Pariz</capital>
+<description>
+Opis francuske
+</description>
+</country>
+</root>

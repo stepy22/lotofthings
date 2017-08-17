@@ -1,0 +1,159 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+/********************************
+@ FONTS
+********************************/
+
+//@font-face {
+//	font-family: 'Lev Serif';
+//	src: local('Lev Serif'),
+//	url('../fonts/levserif-blackdistressed.eot?#iefix') format('embedded-opentype'), url('../fonts/levserif-blackdistressed.woff2') format('woff2'), url('../fonts/levserif-blackdistressed.woff') format('woff'), url('../fonts/levserif-blackdistressed.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Bebas Neue';
+//	src: local('Bebas Nue'),
+//	url('../fonts/bebasneue_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue_light-webfont.woff2') format('woff2'), url('../fonts/bebasneue_light-webfont.woff') format('woff'), url('../fonts/bebasneue_light-webfont.ttf') format('truetype'), url('../fonts/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+//	font-weight: 300;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Bebas Neue';
+//	src: local('Bebas Nue'),
+//	url('../fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'), url('../fonts/bebasneue_regular-webfont.woff') format('woff'), url('../fonts/bebasneue_regular-webfont.ttf') format('truetype'), url('../fonts/bebasneue_regular-webfont.svg#bebas_neueregular') format('svg');
+//	font-weight: 400;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Focus';
+//	src: local('Focus'),
+//	url('../fonts/focus-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/focus-regular-webfont.woff2') format('woff2'), url('../fonts/focus-regular-webfont.woff') format('woff'), url('../fonts/focus-regular-webfont.ttf') format('truetype'), url('../fonts/focus-regular-webfont.svg#focusregular') format('svg');
+//	font-weight: 400;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Focus';
+//	src: local('Focus'),
+//	url('../fonts/focus-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/focus-medium-webfont.woff2') format('woff2'), url('../fonts/focus-medium-webfont.woff') format('woff'), url('../fonts/focus-medium-webfont.ttf') format('truetype'), url('../fonts/focus-medium-webfont.svg#focusmedium') format('svg');
+//	font-weight: 500;
+//	font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Lato';
+//  font-style: normal;
+//  font-weight: 100;
+//  src: local('Lato Hairline'), local('Lato-Hairline'), url(../fonts/Lato-Hairline.woff) format('woff'), url(../fonts/Lato-Hairline.woff2) format('woff2'), url(../fonts/Lato-Hairline.ttf) format('truetype');
+//}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 200;
+	src: local('Lato Thin'), local('Lato-Thin'), url(../fonts/Lato-Thin.woff) format('woff'), url(../fonts/Lato-Thin.woff2) format('woff2'), url(../fonts/Lato-Thin.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Lato Light'), local('Lato-Light'), url(../fonts/Lato-Light.woff) format('woff'), url(../fonts/Lato-Light.woff2) format('woff2'), url(../fonts/Lato-Light.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), local('Lato'), url(../fonts/Lato-Regular.woff) format('woff'), url(../fonts/Lato-Regular.woff2) format('woff2'), url(../fonts/Lato-Regular.ttf) format('truetype'), url(../fonts/Lato-Regular.eot?#iefix) format('embedded-opentype');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/Lato-Bold.woff) format('woff'), url(../fonts/Lato-Bold.woff2) format('woff2'), url(../fonts/Lato-Bold.ttf) format('truetype');
+}
+//@font-face {
+//	font-family: 'Lato';
+//	font-style: normal;
+//	font-weight: 900;
+//	src: local('Lato Black'), local('Lato-Black'), url(../fonts/Lato-Black.woff) format('woff'), url(../fonts/Lato-Black.woff2) format('woff2'), url(../fonts/Lato-Black.ttf) format('truetype');
+//}
+//
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-thin-webfont.woff2') format('woff2'), url('../fonts/raleway-thin-webfont.woff') format('woff'), url('../fonts/raleway-thin-webfont.ttf') format('truetype');
+//	font-weight: 100;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-extralight-webfont.woff2') format('woff2'), url('../fonts/raleway-extralight-webfont.woff') format('woff'), url('../fonts/raleway-extralight-webfont.ttf') format('truetype');
+//	font-weight: 200;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-extralightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-extralightitalic-webfont.woff2') format('woff2'), url('../fonts/raleway-extralightitalic-webfont.woff') format('woff'), url('../fonts/raleway-extralightitalic-webfont.ttf') format('truetype');
+//	font-weight: 200;
+//	font-style: italic;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-light-webfont.woff2') format('woff2'), url('../fonts/raleway-light-webfont.woff') format('woff'), url('../fonts/raleway-light-webfont.ttf') format('truetype');
+//	font-weight: 300;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-regular-webfont.woff2') format('woff2'), url('../fonts/raleway-regular-webfont.woff') format('woff'), url('../fonts/raleway-regular-webfont.ttf') format('truetype');
+//	font-weight: 400;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-medium-webfont.woff2') format('woff2'), url('../fonts/raleway-medium-webfont.woff') format('woff'), url('../fonts/raleway-medium-webfont.ttf') format('truetype');
+//	font-weight: 500;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'), url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-bold-webfont.woff2') format('woff2'), url('../fonts/raleway-bold-webfont.woff') format('woff'), url('../fonts/raleway-bold-webfont.ttf') format('truetype');
+//	font-weight: 700;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'), url('../fonts/raleway-extrabold-webfont.woff') format('woff'), url('../fonts/raleway-extrabold-webfont.ttf') format('truetype');
+//	font-weight: 800;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Raleway';
+//	src: local('Raleway'),
+//	url('../fonts/raleway-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-black-webfont.woff2') format('woff2'), url('../fonts/raleway-black-webfont.woff') format('woff'), url('../fonts/raleway-black-webfont.ttf') format('truetype');
+//	font-weight: 900;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Oswald';
+//	src: local('Oswald'), url('../fonts/oswald-light.eot?#iefix') format('embedded-opentype'), url('../fonts/oswald-light.woff2') format('woff2'), url('../fonts/oswald-light.ttf') format('truetype');
+//	font-weight: 300;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: 'Oswald';
+//	src: local('Oswald'), url('../fonts/oswald-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/oswald-regular.woff2') format('woff2'), url('../fonts/oswald-regular.ttf') format('truetype');
+//	font-weight: 400;
+//	font-style: normal;
+//}

@@ -1,0 +1,31 @@
+/**
+ * @version v1.1.6
+ * @build 2-18-2017
+ * @package nowadays - One/Multi Page Multipurpose Creative HTML5 Template
+ * @author  Pavel Marhaunichy <onebelarussianguy@gmail.com>
+ * @license SEE LICENSE IN http://themeforest.net/licenses
+ * @website http://likeaprothemes.com
+ */
+
+//colors
+$white: #fff;
+$black: #000;
+$blackTitle: #333;
+$theme: #16a085;
+$footerColor: #0B1216;
+$footerTextColor: #9AA8A8;
+$mobileMenuColor: #0C1317;
+$dark: $footerColor;
+$lightgray: #F6F6F6;
+$darkgray: #222;
+$text: #555;
+//dots slider 5
+$dotw: 12px;
+$doth: 12px;
+$dotb: 12px;
+$dotColor: rgba(255, 255, 255, 0.5);
+$dotActiveColor: darken($dotColor, 30%);
+$dotBorderColor: transparentize($dotColor, 0.3);
+//fonts
+$font1: 'PT Sans', 'Helvetica', sans-serif;
+$font2: 'Lato', 'Helvetica', sans-serif;

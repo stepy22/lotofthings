@@ -1,0 +1,7 @@
+PODACI ZA LOGOVANJE:
+
+username:          password:
+admin              123
+autor		   456
+editor		   789
+

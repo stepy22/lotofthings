@@ -1,0 +1,2 @@
+vezba1== vremenska provgnoza bez api-a preko linka
+vezba2==vremenska prognoza sa api

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-controller="mainControler">
+<div class="row">
+    <div class="col-sm-8">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="filmovi in svifilmovi">
+                <td ng-class="{classType:filmovi.genre === classType}">{{filmovi.name}}</td>
+                <td>{{filmovi.genre}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="password" class="form-control" ng-model="classType" placeholder="enter class name">
+        <h1>{{classType}}</h1>
+    </div>
+</div>
+
+
+<script src="filmDB.js"></script>
+
+</body>
+</html>

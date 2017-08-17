@@ -1,0 +1,33 @@
+<html>
+<body>
+<input type="text" onkeyup="search(this.value)" />
+<div id="cilj"></div>
+</body>
+</html>
+<script>
+function search(s){ 
+if(s.length<3){
+return;
+}
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState == 4){
+			var odgovor = xhr.responseText;
+			var objekat = JSON.parse(odgovor);
+			//3index.html:15 [{"film_id":"238","title":"DOCTOR GRAIL"},{"film_id":"445","title":"HYDE DOCTOR"}]
+			var cilj = document.getElementById("cilj");
+			cilj.innerHTML = "";
+			for(var i=0;i<objekat.length;i++){
+				cilj.innerHTML += objekat[i].title + "<br />";
+			}
+		}
+	}
+	xhr.open("get","movies.php?search="+s,true);
+	xhr.send(null); 
+
+	 
+}
+
+
+
+</script>

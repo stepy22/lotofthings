@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel ="stylesheet" type= "text/css">
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+
+	<div id="header">
+    	<div id="logo">
+        <a href="index.html">
+    		<img src="images/logo.png" alt="lineweb">
+         </a>
+    	</div>
+        <div id="slogan">
+        	<p>Lorem ipsum dolor.</p>
+        </div>
+	</div>
+	<div id="nav">
+    <ul>
+    	<li><a href ="index.html">Home page</a></li>
+        <li><a href ="work.html">Work</a></li>
+        <li><a href ="info.html">Info</a></li>
+        <li><a href ="about.html">About as</a>
+        	<ul>
+            	<li><a href ="story.html">Our story</a>
+                	<ul> 
+                    <li><a href="#">prvi link</a></li>
+                    <li><a href="#">drugi link</a></li>
+                    <li><a href="#">treci link</a></li>
+                    <li><a href="#">cetvrti link</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href ="contact-us.html">Contact us</a></li>
+            </ul>
+        </li>
+        <li><a href ="#">Gallery</a></li>
+    </ul>
+    <div id="social">
+    	<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        
+        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        
+        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    </div>
+    
+	</div>
+	<div id="main">
+           <h1>Contact us</h1>
+         <form action="" method="">
+         <!--Forma za unošenje action i metod-post ili get a action za povezivanje sa php skriptom,labela za pisanje onoga pored polja i for u labeli ako se klikne na ime da se ide odmah na polje za upis. Input je za pravljenje polja, placeholder da se u polju prikaze sta treba upisati,checkbox nije međusobno isključiv a radio jeste i kod radija stavlja se isti name kako bi se znalo sta je međusobno iskljucivo nppr muski ženski pol. Submit dugme pokrece slanje forme actionu u formi postavljenoj. Value u submit da mi odredimo koji tekst da pise za slanje podataka. Stilizacija formi je teska i bolje ostaviti kakva jeste jer je različita kod svakog browsera. Reset je za resetovanje forme. Textarea je za veće polje tekstualno,vise redova. Rows i cols je za odredjivanje dimenzija text area. labela moze biti i oko inputa onda ne treba for kod labele -->
+        	<label for="ime">Ime:</label><br>
+         	<input type="text" name="ime" id="ime" placeholder="Upišite ime...">
+            <br><br>
+            <label for="prezime">Prezime:</label><br>
+         	<input type="text" name="prezime" id="prezime" placeholder="Upišite prezime...">
+            <br><br>
+            <input type="checkbox" name="potvrda" id="potvrda">
+            <label for="potvrda">Slažem se sa uslovima..</label>
+         <br><br>
+         <input type="radio" name="pol" id="zenski">
+		 <label for="zenski">Ženski</label>         
+         <br>
+         <input type="radio" name="pol" id="muski">
+		 <label for="zenski">Muški</label>         
+         <br><br>
+         <label for="poruka">Poruka</label><br>
+         <textarea name="poruka" rows="10" cols="40" id="poruka"></textarea>
+           <br><br>
+         <input type="submit" name="submit" value="Pošalji podatke">
+          <input type="reset" name="reset" value="Resetuj formu">
+          </form>
+	</div>
+	<div id="sidebar">
+    <div class="block">
+    <h2>Prvi</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed minima molestiae voluptas deserunt quis debitis.</p>
+</div>
+<div class="block">
+     <h2>Drugi</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed minima molestiae voluptas deserunt quis debitis.</p>
+    </div>
+    <div class="block">
+    <h2>Treći</h2>
+ <p><a href="#"><img src="images/location.png" alt="mapa"></a></p>
+ <p><a href="#">Pogledajte detaljnije</a></p>   
+	</div>
+    </div>
+	<div id="footer">
+    	<p>Copyright &copy; Lineweb</p>
+	</div>
+    </div>
+</body>
+</html>

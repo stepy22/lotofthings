@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
+</head>
+<body>
+<form action="">
+    <input name="name" type="text" onblur="search()">
+</form>
+<p id="info_p"></p>
+<script>
+    function ajaxFunction(){
+        var ajaxRequest;
+        ajaxRequest = new XMLHttpRequest();
+        return ajaxRequest;
+    }
+
+    var info_p = $('#info_p');
+    function search(){
+        var xhr = ajaxFunction();
+        var name = document.forms[0].name.value;
+        xhr.open('get','vezba.php?name='+name, false);
+        xhr.send();
+
+        var userExists = (xhr.responseText ==='1');
+        if (userExists) {
+
+            info_p.text('ime zauzeto');
+
+            info_p.css('color','red');
+
+        }else{
+
+            info_p.text('ime slobodno')
+
+            info_p.css('color','green');
+
+        }
+
+        return false;
+
+    }
+
+</script>
+</body>
+</html>

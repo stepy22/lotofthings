@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .box{
+            margin:10px;
+            width:300px;
+            height:100px;
+            background: radial-gradient(circle,blueviolet,midnightblue);
+            color:whitesmoke;
+            position:relative;
+        }
+        .red{
+            background: red;
+           
+        }
+        #prvi{
+         
+        }
+        #drugi{
+            position: absolute;
+            left:500px;
+            top:0;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div id="otac">
+    <div id="prvi" class="box">Ovo je prvi DIV</div>
+    <div id="drugi" class="box"><a href="http://www.google.com">Ave beliiiiiiii</a></div>
+    <div id="treci" class="box"></div></div>
+    <input type="text">
+    <script>
+        $(document).ready(function(){
+          
+            $(window).keyup(function(e){
+                var taster = e.which;
+              
+                
+          $('#prvi').animate({left:'+=50px'})
+              var polozaj = $('#prvi').css('left');
+                            var drugi = $('#drugi').css('left');
+              var sirina=$('#prvi').width();
+               var polozaj = polozaj.split("px");
+            
+              polozaj[0]+= sirina;
+            
+                           alert(polozaj[0])
+
+            if(polozaj == drugi){
+              $('#drugi').css('background','red');
+              }
+
+            }) 
+        })
+         
+        
+    </script>
+</body>
+</html>

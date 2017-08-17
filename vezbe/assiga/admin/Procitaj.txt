@@ -1,0 +1,6 @@
+Podaci za logovanje u admin panel:
+
+Username:     Password:
+admin         123
+autor         456
+editor        789

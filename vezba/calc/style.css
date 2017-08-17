@@ -1,0 +1,123 @@
+body {
+
+	background-image: url("image.jpg");
+
+/*  background-repeat: no-repeat; */
+	    
+
+	 background-size: cover;
+     padding: 10% 0% 0% 0%;
+
+}
+
+
+
+div {
+	
+	border: 4px solid rgba(192,192,192,0.8);
+	border-radius: 15px;
+	background-color: rgba(255,0,0,0.7);
+	text-align: center;
+	margin: auto;
+	width: 400px;
+	height: 300px;
+	padding: 100px 0px 0px 0px;
+	user-select: none;
+	
+}
+
+
+
+
+
+
+h1 {
+
+	margin: -60px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color: white;
+
+}
+
+
+
+
+#table {
+
+	  margin: auto;
+	  padding: 160px 10px 0px 0px;
+  
+	}
+
+
+
+#rezult {
+
+	background-color: rgba(60, 69, 177, 0.9);
+}
+
+
+
+
+
+input[type=number]{
+
+background-color: silver;
+
+}
+
+
+
+
+.label {
+
+
+	background-color: orange;
+	background-color: rgba(182, 111, 42, 0.8);
+
+}
+
+
+
+
+
+input[type=submit] {
+
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Times New Roman", Georgia, serif;
+	border: 2px solid gray;
+	color: black;
+	background-color: inherit;
+	transition: all 0.5s;
+
+
+}
+
+
+
+
+input[type=submit]:hover {
+
+border: 2px solid aqua;
+color: aqua;
+
+}
+
+
+#table2 {
+
+margin: auto;
+padding: 150px 0px 0px 0px;
+
+}
+
+#login{
+
+	text-align: center;
+}
+
+#provera{
+	color: white;
+	margin: auto;
+}

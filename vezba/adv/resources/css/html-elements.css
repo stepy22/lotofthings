@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color:#444;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#333;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin:0 0 20px;
+}
+
+h1 { font-size:24px;}
+h2 { font-size:22px;}
+h3 { font-size:20px;}
+h4 { font-size:18px;}
+h5 { font-size:16px;}
+h6 { font-size:14px;}
+
+p {
+	margin:0 0 10px;
+}
+
+a, 
+a:link 	{ color:#990000; text-decoration:none;}
+a:hover { color:#b94e4e; text-decoration:none;}
+
+
+
+/* opisi za top deo */
+
+#top h1 {
+	font-size:64px;
+	margin:0;
+}
+
+#top h1 span {
+	color:#999;
+	font-weight:normal;
+}
+
+#top p {
+	font-weight:bold;
+	font-style:italic;
+	color:#999;
+	font-size:1.3em;
+}
+
+
+
+/* pomocne klase */
+
+.floatD {
+	float:right;
+}
+
+.floatL {
+	float:left;
+}
+
+.noMargin {
+	margin:0 !important;
+}
+
+
+
+
+
+

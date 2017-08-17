@@ -1,0 +1,129 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="checker.js"></script>
+<style>
+    *{
+ 
+    margin:0;
+ 
+    padding:0;
+ 
+}
+ 
+body{
+ 
+    text-align:center;
+ 
+    background-color:#696969;
+ 
+}
+ 
+form{
+ 
+    margin: 80px auto;
+ 
+    width:600px;
+ 
+}
+ 
+form h1{
+ 
+    color:#fff;
+ 
+    font-size:64px;
+ 
+    font-weight: normal;
+ 
+    line-height:1;
+ 
+    text-shadow:0 3px 0 rgba(0,0,0,0.1);
+ 
+}
+ 
+form ul{
+ 
+    list-style:none;
+ 
+    color:#fff;
+ 
+    font-size:20px;
+ 
+    font-weight:bold;
+ 
+    text-align: left;
+ 
+    margin:20px 0 15px;
+ 
+}
+ 
+form ul li{
+ 
+    padding:10px 30px;
+ 
+    background-color:#cc0000;
+ 
+    margin-bottom:8px;
+ 
+    box-shadow:0 1px 1px rgba(0,0,0,0.1);
+ 
+    cursor:pointer;
+ 
+}
+ 
+form ul li span{
+ 
+    float:right;
+ 
+}
+ 
+form ul li.active{
+ 
+    background-color:#339900;
+ 
+}
+ 
+  
+ 
+div.total{
+ 
+    border-top:1px solid rgba(255,255,255,0.5);
+ 
+    padding:15px 30px;
+ 
+    font-size:20px;
+ 
+    font-weight:bold;
+ 
+    text-align: left;
+ 
+    color:#fff;
+ 
+}
+ 
+div.total span{
+ 
+    float:right;
+ 
+}
+</style>
+</head>
+
+<body ng-app="form" ng-controller="formController">
+    <form action="">
+    <h1>Web Services</h1>
+    <ul>
+    <li ng-click="toggleactive(item)" ng-class="{active:item.active}" ng-repeat="item in items |  orderBy:'name' ">
+        {{item.name}} <span>{{item.price | currency}}</span>
+    </li>
+    </ul>
+    <div class="total">
+        Total:<span>{{total()}}</span>
+    </div>
+    </form>
+</body>
+</html>

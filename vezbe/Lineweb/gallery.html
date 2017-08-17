@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel ="stylesheet" type= "text/css">
+<link href="lightbox/css/lightbox.min.css" rel="stylesheet" type="text/css">
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script><!--samo se on moze postaviti i u body,jqury ako se jednom postavi na str ne stavlja se vise -->
+
+</head>
+
+<body>
+<div id="wrapper">
+
+	<div id="header">
+    	<div id="logo">
+        <a href="index.html">
+    		<img src="images/logo.png" alt="lineweb">
+         </a>
+    	</div>
+        <div id="slogan">
+        	<p>Lorem ipsum dolor.</p>
+        </div>
+	</div>
+	<div id="nav">
+    <ul>
+    	<li><a href ="index.html">Home page</a></li>
+        <li><a href ="work.html">Work</a></li>
+        <li><a href ="info.html">Info</a></li>
+        <li><a href ="about.html">About as</a>
+        	<ul>
+            	<li><a href ="story.html">Our story</a>
+                	<ul> 
+                    <li><a href="#">prvi link</a></li>
+                    <li><a href="#">drugi link</a></li>
+                    <li><a href="#">treci link</a></li>
+                    <li><a href="#">cetvrti link</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href ="contact-us.html">Contact us</a></li>
+            </ul>
+        </li>
+        <li><a href ="gallery.html">Gallery</a></li>
+    </ul>
+    <div id="social">
+    	<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        
+        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        
+        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    </div>
+    
+    
+    
+    
+    
+    
+	</div>
+	<div id="main">
+           <h1>Photo Gallery</h1>
+		   <a href="gallery/velike/1.jpg" data-lightbox="galerija"><img src="gallery/male/1.jpg" alt=></a>
+		   <a href="gallery/velike/2.jpg" data-lightbox="galerija"><img src="gallery/male/2.jpg" alt=></a>
+		   <a href="gallery/velike/3.jpg" data-lightbox="galerija"><img src="gallery/male/3.jpg" alt=></a>
+		   <a href="gallery/velike/4.jpg" data-lightbox="galerija"><img src="gallery/male/4.jpg" alt=></a>
+		   <a href="gallery/velike/5.jpg" data-lightbox="galerija"><img src="gallery/male/5.jpg" alt=></a>
+           <!--data-lightbox se dodaje jer je potrebna inicijalizacija -->
+	</div>
+	<div id="sidebar">
+    <div class="block">
+    <h2>Prvi</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed minima molestiae voluptas deserunt quis debitis.</p>
+</div>
+<div class="block">
+     <h2>Drugi</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed minima molestiae voluptas deserunt quis debitis.</p>
+    </div>
+    <div class="block">
+    <h2>Treći</h2>
+ <p><a href="#"><img src="images/location.png" alt="mapa"></a></p>
+ <p><a href="#">Pogledajte detaljnije</a></p>   
+	</div>
+    </div>
+	<div id="footer">
+    	<p>Copyright &copy; Lineweb</p>
+	</div>
+    </div>
+	<script src="lightbox/js/lightbox.min.js"></script><!--pise se na kraju body, ovo je za gallery jer browser prvo ucitava kod pa onda pluginove -->
+</body>
+</html>

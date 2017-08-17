@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /_src/assets/sass/
+
+Sitemap: http://slowcat.rs/sitemap.xml
